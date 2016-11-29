@@ -1,5 +1,5 @@
 {
-  "rootPath": "github.com/shapeshed/hello",
+  "rootPath": "github.com/shapeshed/go-ci-cd",
   "heroku": {
     "goVersion": "go1.6"
   }
