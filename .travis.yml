@@ -1,34 +1,25 @@
 sudo: required
-
 services:
-    - docker
-
+- docker
 language: go
-
 go:
 - 1.7
-
 script:
 - make
-  #deploy:
-  #provider: heroku
-  #buildpack: https://github.com/kr/heroku-buildpack-go.git
-  #app: go-ci-cd
-  #api_key:
-  #  secure: isFzpe/ByKgfkroxxgk03yMW9qPBDNmDCVmuog3RiWxRARYbelkEc79eajHW/T/WM8gqRYql11A8YaRWGcWWhxzOOtnjNqJyvQCkJRLYXMYsNE9AypQbrOIEeoRpKPMeE92hYvjES39lNLi0iWviKewt8dwG6U6fU8ayW8Ez2H8RRPQRomNUiaaem1VHHJTbZRZWXiODxc+l1pSJJWhiJVvqXqyN+Th0tFGBan2ur0mxrW5zfs/spKWo7W5O34ooe3BI84R2CBm+JMCsZ7mtqmiNHdygzjmiLo7gxsDyi10Mo4/JN9BS1nHrZuZo2eEaeufQd+kfNkGGo1NBIylAlwWZUtLyMGeo9gqygMTFRyiZxCxgyWYVM+09C/lZsaD6t5dG4ZS71R5BV9rDN5nL07L8T/lb3iiBNdLve/7jdtQpN57tqa3sFYSn7E3imD5pSE/SZjVfy2/xe9JLJTa2TVmqLScUXaSSASJciO6N8RKiGn5RcvZxiskWWZEfXDcE8/RwLDtKiccAm7XQVcJ+yneTnyJBDld+C0uZB3XzL8HAY09TRPeCIMHu65Q9w8bX4qMml7HVuOBWalGBE0OcdCUqlwHJ2NdR8w5AYNeXsFcQBXspCq5xjYXzbOvLcY8KTnmCf1DEjI5gsn6hs9U1gNcmjTEAp3PrL6AQa+PckB4=
-  #
 env:
   global:
   - secure: Nd3BgthDxiA0cl4PFoWl5pOHl4ZyrxX94PKhOq/4FiQIMdjgK2JSUcxxUPFq4dWufGbhb1eLPGmweAVYROv1Me1VQ7Zktbq3Gm85iuVrHhywYxACeMoIxxlJodhnd3x7Qj92UJDebmEKapBKZnn6vWpPoS2KC3w1p/HfQPX+2Or0puNDvT0brzxuaaSXw+GxB/sr3pdNhLSwOvY6+Gmjc/hsYqNnDivB+6WBcc+SrHhwbhjsH5rj06DDRPGruNMxOPCC9bgJ2T8TFzAi0NCxQXd4No84bNDDuve4ofod3V29CV9/SNN84BfPhGjoMSJR6NdIb6m2DdE85GDzjRwNPQ+fpiY/XDHax0wIRdi2FSas6XTvFI5sO4gKGAOY00JxVLKhAv0ezGyJArRnfJ8bxNiLpbh0Q8/olB70219z263kNIf0ahQN1O45q7Qg9XGSGnbE9ToTb4r1eQP1Zty4xnxbBSS5pwJ3QHwIdc29iCsgA15dutfFfhsSGYjs/7/zEu92p/D/yzoV0EhbrAqssGS2Bd6NWmn/7QIrwl6JJ8bxuKxhNan7fGIPejdCBfj95O6T8VxMBV9ovJqytUwtXoPZdSAhjm/fXqzKFh3Mm9Q2AqKz6oZgxpCjLWJCQ/EBdgl4VHXNZw7hncv2V5AB4r3X/Qta2OnhbyaH+gasdrs=
   - secure: NIe879uU6zXbHJLNeljBY6Rs5Xi1PZuoZ7lh4ofG/Ofpy39kY9VNzmcyRrjk/iGYLRdB6NTTEoz0reDJjqPyh6l8OcEnMdRnMjK4QiSfjrgI3oQLlpDGwEaB8DBNrnBHmcbgjMYM+CwIgAXwekYL0XXUCIEiCFFrjDVM3C4CcUncRdM1xZXF51x29qpnqirSMwCC6zm6xeusNy/JnWbmQd2gHoxuwkbMkYUcy6XUl2gcasWL9hmjrPkSB6FzY1hN+NP08i1zKokTDw3wxc+VXlN3psaHLXoz0hLPwmNR7SwmgZGfvu6jkQF/1slO29g00AWe8JWej3ns/+pH4pHGVcn8hY+f2FrTgPFazhW6+qLQ1v0eMsIlwRyucxxnzUqibcgje+jUaO2rqCri1M1uYfxP3mrnbMRfrW9yiN0sUnvkZkHTb3ZN8tGB+78BxU/O1Wl+6RFvsZDYGyMaIzt0+bg1e2ucNSpOeWXrZ2zjX3u0U7uoUHlH6GraMgEnqMMsF76eGTbUF3FSJtHO+Ey2Aqyx6zBFTTU/2goibk+nwugAAXUXaeR3kSIjWnyT/qeB2rFj67iNmoCpq2WOHb85Bf5NZvkxntxDAJr5VrWiCBCzyVm3lR6nKCdB4wGnEB47wPQWQXuttAR+p8VYSJ6DEZhMD44iOrrcNSBhKqnm96U=
   - secure: XLhkxkHdx40PPvaL5cE7XOFeN0GWXeBRdkBABGKdg44Z6bQ0SitNqJcpXSEV/pIPYrYWIbFfKt3MsS7cQ9ItESPvflThABidTp2I3oUxte6JwtMJ+Hdw0VwLJuyAiXkVoCs5iyYR0PJWmgBlr7D/TlzwoNQx+2vC78ITnroi4BEfjiEhtJLlgIEMdwik5bwGV/ZKxrAREY+TMrqp3cwgbTgC7EMllS8lcWuEWgVIF2dyBHtGK7GMHTVe/ay9K0RSWS/lffsQPkhpxvH6EWOlO5ruLmczileQiAVoGjqCwZiaziaD+MzRHMNsogOO/nhH8uVDpAe9Ua8GjstMtd2NgvmgiptYMaOOo1Gwz3XcRuKgwnDolO5MHuGwNNhwg0As7b0Q6HaE6adSM149lvg0r0fRsG8qnPgPbCjP1IWxn2Qa6qWx7yVK5Wfa6MU429mtejpTZp0Zx8iPY60SCIpSgFg+KazyKQMmPh95MAgOZA33RjMyf54uw9GsIIO4jVQp8fnF9JzwdIDKkkzo9wdYoaocGhxyUcZiB+kYE+5Be8UYqXTGna6j/ueVWza6P6hJ3qlmPNASvTF6/Mms3lDdjBXCESt2IfmInhwCrvoWDFD/ORjo25jkFaf5s/11K53qdQQFhEPuNcB6Y26YYWIA7JQ4jpDnmCCmhu+8/baEAiQ=
   - COMMIT=${TRAVIS_COMMIT::8}
-
+  - secure: k/QByY7tOaYd6ec2G9Ga5a/qRpVwOtkhY9bcgqdmzE2bW0iQgfbN1TBtJvsL2DlxdmEAOxoLfDhLR9BeVQp2Zfm7k7d3ToFeI881dr7O9T1PCNKw1YcZtGcdvvEu6gwI+gvquhlbfsHQ3LLaRdYyvVdfWkK53y2yAdp4SOtIG7FxjCNHyOQit616H7DX0gxD18i1oB+CZ6MkXMl0bt2JMJVIQtJcPCtNFKlyeyE+250BLVtp1I+XZXwmf59rOFE8B0GQ59eULcSV2ihE43gxaaciNduaUciKlGX1P/5CYJbPuoLGUozUuMyoIf9W/SCAl80qpUfvJONC2Lr7Fp2lca7lkowcFzeS2Xm/Oy8l7M1RnxdAUQwC1tz7mZ+IOXsjyhTn43j3dQY3mVoqNGJTwBj/N/VcwkS+62KH1WkBz15KsXQLVinmix5Zm2d1faxkAq2rENA/uTQOw01oIquLyhD42VAmGUCfezXtC6kuBTgQaddHlYvCnt6V+p/Omao7EKq6f3pQf26Ieyu3Z5vCWzOacvHh9YY//TdPCcu33S+YSozfQkUrNeXsuqa2cdnNZY1Afj+3U2d/my7cp1CMEe0TpBOrVcbgVCPmpdvRfSGDfCjhLfLRzpZg+j9A6N95YF5T3lQ2fWSeeCm0E2nzcMuwSFX0yf+tzqNPXg9noJA=
+  - secure: OPhASlyxlgPwY4yIBk/GzQLzHpWomQGq0VIs+0zdaOsHgaLfUzxEEfdgxKLvbRoqwnCwdFAuG7+RgarPnEpmRV7cbw+8wEpWguCvCwwKmC2QS0zQo+Wcp4sDsXMmLli7qZeebDYCVrla+E2RGYcbFk8c2D66FIqs0/tGv2Xsme/wYjjRst8AL2CwX+egYKj7Z509b1sPbUMG4l31HPag6+n0sYGfKHRylW7Bmsslzm7GBfdfB/khGIdkf4a4o9t85j/rakXwzlBA53GwsHFNp8hWYzsNIK+PBMXxeeFgVB67vGEcFb02TOd9DMNHUszG5WMZoiy74hkFUzmMSb6mVfNSuJh0kTWUQ+hV0GxjUdpYdN3s9Xw3aRPOB7s3EK+ubbchptYrWMXfia0dAL+kws9DjQBu5Rx1W8+yyU9t35JcoCu1qNZnN+ln8HcARHQ1R8/JguxEUP5Tntb6GtA+TOGeS5aZ9ZsiZtT5kBVgawEGzdH7SEmEXdbSs9/brdCPo8E5Mc68ljlTaiy40ZcEFSDy25jHtY+SdKeKdhoiFP6WrXsrEKJAbeBwn/z6diocE6W9f67vC76CDxP7FHzjhHtkd/VsfoNZXfX2Dm0b9FCpPYcnMP7ormN6Fus2bt4DUg2pRxjq++pSNQ3IyBMGMC90GET0F8Ut4RPJCRwhLtM=
 after_success:
-  - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
-  - export REPO=shapeshed/go-ci-cd
-  - export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo $TRAVIS_BRANCH ; fi`
-  - docker build -f Dockerfile -t $REPO:$COMMIT .
-  - docker tag $REPO:$COMMIT $REPO:$TAG
-  - docker tag $REPO:$COMMIT $REPO:travis-$TRAVIS_BUILD_NUMBER
-  - docker push $REPO
+- docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
+- export REPO=shapeshed/go-ci-cd
+- export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo $TRAVIS_BRANCH
+  ; fi`
+- docker build -f Dockerfile -t $REPO:$COMMIT .
+- docker tag $REPO:$COMMIT $REPO:$TAG
+- docker tag $REPO:$COMMIT $REPO:travis-$TRAVIS_BUILD_NUMBER
+- docker push $REPO
