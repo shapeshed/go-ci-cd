@@ -1,4 +1,7 @@
-all: check-gofmt vet 
+all: check-gofmt vet build
+
+build: 
+	@CGO_ENABLED=0 GOOS=linux go build -a -tags netgo -ldflags '-w' -o main .
 
 check-gofmt:
 	@if [ -n "$(shell gofmt -l .)" ]; then \
