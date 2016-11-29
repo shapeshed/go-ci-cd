@@ -1,4 +1,4 @@
-Go Continuous Integration and Continuous Deployment
+# Go Continuous Integration and Continuous Deployment
 
 [![Build Status](https://travis-ci.org/shapeshed/go-ci-cd.svg?branch=master)](https://travis-ci.org/shapeshed/go-ci-cd)
 
